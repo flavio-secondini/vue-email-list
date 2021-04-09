@@ -4,8 +4,8 @@ var app = new Vue ({
     mail: [],
     prova: 'test',
   },
-  methods: {
-    generaMail: function () {
+  mounted () {
+    for (var i = 0; i < 10; i++) {
       let origine = this
       axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
       .then(function (response) {
@@ -13,5 +13,5 @@ var app = new Vue ({
       origine.mail.push(result);
       })
     }
-  }
+  },
 })

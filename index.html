@@ -9,8 +9,7 @@
 <body>
 
   <div id="root">
-    <button type="button" name="button" @click="generaMail">Genera indirizzo mail</button>
-    <ol>
+    <ol v-if="mail.length == 10">
       <li v-for="indirizzo in mail">{{indirizzo}}</li>
     </ol>
   </div>
